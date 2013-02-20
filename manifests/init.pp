@@ -35,7 +35,7 @@ class apache_crowd (
 			package { "$pkg_perl_libwww":
 					ensure => present,
 			}
-			$pkg_dependencies = Package["$pkg_perl","$pkg_perl_soap","$pkg_perl_cache","$pkg_perl_libwww"]			
+			$pkg_dependencies = Package['apache',"$pkg_perl","$pkg_perl_soap","$pkg_perl_cache","$pkg_perl_libwww"]			
 		}
 		default : {
 			fail("operating system currently not supported")		
@@ -52,7 +52,8 @@ class apache_crowd (
 		"mod_authnz_rpm" :
 			download_url => "https://studio.plugins.atlassian.com/svn/CWDAPACHE/tags/2.0.1/packages/rhel6/mod_authnz_crowd-${authnz_version}.rpm",
 			require => $pkg_dependencies,
-			onlyif => "$cmdtest \"$($cmdcat $httpd_conf | $cmdgrep \"mod_authnz_crowd\")\" = \"\"",			
+			onlyif => "$cmdtest \"$($cmdcat $httpd_conf | $cmdgrep \"mod_authnz_crowd\")\" = \"\"",		
+			notify => Service['apache'],	
 	} 
 	
 	$atlassian_rpms_zip='atlassian-RPMS.zip'
@@ -63,6 +64,7 @@ class apache_crowd (
 			custom_install_selection => "$filter_release",
 			require => $pkg_dependencies,
 			onlyif => "/usr/bin/test \"$(/usr/bin/yum search perl-Atlassian-Crowd | $cmdgrep \"No Matches found\")\" != \"\"",
+			notify => Service['apache'],
 	}
 		
 }
