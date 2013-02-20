@@ -1,0 +1,14 @@
+<Location <%=crowd_app_path %>>
+	AuthType Basic
+	AuthName "<%=crowd_authentication_dialog_title %>"
+	PerlAuthenHandler Apache::CrowdAuth
+	PerlSetVar CrowdAppName <%=crowd_app_name %>
+	PerlSetVar CrowdAppPassword <%=crowd_app_password %>
+	PerlSetVar CrowdSOAPURL <%=url %>/services/SecurityServer
+	PerlSetVar CrowdCacheEnabled <%=crowd_cache %>
+	PerlSetVar CrowdCacheLocation <%=crowd_cache_location %>
+	PerlSetVar CrowdCacheExpiry <%=crowd_cache_expiry %>
+<% if crowd_allowed_users != '' %>	PerlSetVar CrowdAllowedUsers <%=crowd_allowed_users %><% end %>
+<% if crowd_allowed_groups != '' %>	PerlSetVar CrowdAllowedGroups <%=crowd_allowed_groups %><% end %>
+	Require valid-user
+</Location>

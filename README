@@ -1,0 +1,21 @@
+puppet-apache_crowd
+
+This is the puppet-apache_crowd module.
+It is an implementation of the atlassian apache crowd connector guidelines:
+https://confluence.atlassian.com/display/CROWD020/Integrating+Crowd+with+Apache
+plus
+https://confluence.atlassian.com/display/CROWD024/Installing+the+Crowd+Apache+Connector+on+Red+Hat+Enterprise+Linux
+
+This implementation uses the older standard because it supports both Crowd 
+versions smaller and greater than 2.0. The new standard only supports Crowd 
+versions greater than 2.0 (see last point listed at: 
+https://confluence.atlassian.com/display/CROWD024/Integrating+Crowd+with+Apache#IntegratingCrowdwithApache-Step6.ConfiguringSubversion%28Optional%29 ).
+
+Because this module installs several packages from a zip archive you must include
+https://github.com/akquinet/puppet-unzip.git as a module and place an
+"include unzip" or "class { "unzip" : }" in your recipe.  
+
+Example usage in combination with the example42/puppet-apache module
+(https://github.com/example42/puppet-apache):
+
+TODO
