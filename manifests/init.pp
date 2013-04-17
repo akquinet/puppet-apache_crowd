@@ -50,7 +50,8 @@ class apache_crowd (
 	
 	pkgmngt::install {
 		"mod_authnz_rpm" :
-			download_url => "https://studio.plugins.atlassian.com/svn/CWDAPACHE/tags/2.0.1/packages/rhel6/mod_authnz_crowd-${authnz_version}.rpm",
+			download_url => "http://downloads.atlassian.com/software/crowd/downloads/cwdapache/packages/rhel6/mod_authnz_crowd-${authnz_version}.rpm",
+			nocheckcertificate_if_https => true,
 			require => $pkg_dependencies,
 			onlyif => "$cmdtest \"$($cmdcat $httpd_conf | $cmdgrep \"mod_authnz_crowd\")\" = \"\"",		
 			notify => Service['apache'],	
@@ -61,6 +62,7 @@ class apache_crowd (
 	pkgmngt::install {
 		"atlassian_rpms" :
 			download_url => "https://studio.plugins.atlassian.com/source/browse/~tarball=zip/CWDAPACHE/branches/1.x/RPMS/RPMS.zip",
+			nocheckcertificate_if_https => true,
 			custom_install_selection => "$filter_release",
 			require => $pkg_dependencies,
 			onlyif => "/usr/bin/test \"$(/usr/bin/yum search perl-Atlassian-Crowd | $cmdgrep \"No Matches found\")\" != \"\"",
