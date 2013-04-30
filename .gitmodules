@@ -16,3 +16,6 @@
 [submodule "modules/wget"]
 	path = modules/wget
 	url = https://github.com/akquinet/puppet-wget.git
+[submodule "modules/selinux"]
+	path = modules/selinux
+	url = https://github.com/akquinet/puppet-selinux.git

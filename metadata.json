@@ -11,8 +11,9 @@
     ".project": "f0155cf273c0a7987e695a0d5b5e0d72",
     "Modulefile": "0ff8c29ed2cdda7fb02b3715ddd2bb6c",
     "README": "e5c3e907b8daf540db2f3f7948b9d51d",
-    "manifests/init.pp": "5028e6b742b2e5ab4e5ecb2995ba0cbb",
-    "manifests/location.pp": "44986b5b2db0120a5fbb98216b082611",
+    "files/RPMS.zip": "99ddd8e71ba14560dcdcaf64a2a1db59",
+    "manifests/init.pp": "2fb956274f525313c172ca8367a9fbc3",
+    "manifests/location.pp": "0aed5bc55311c2bb3042547e1cb1e004",
     "modules/apache/.project": "e719e13e623e98d35c377d10ffd2870d",
     "modules/apache/Modulefile": "8c16a948ef0097633c0c84636dd833fb",
     "modules/apache/README.rdoc": "fb68f9673b7eb7ea85b330e3fe8e0373",
@@ -168,6 +169,15 @@
     "modules/puppi/templates/puppi.conf.erb": "c43466feb6d69c1adaafd7c6b595c4e9",
     "modules/puppi/templates/puppi.erb": "1545ae49850a2284730488eedcc99ee9",
     "modules/puppi/templates/todo.erb": "6cc03fecb87c577e796206958ee85b82",
+    "modules/selinux/Modulefile": "2ec31cd786b1008b8458f43d276854fc",
+    "modules/selinux/README.markdown": "26cea45f6db13a237a1a9665149cd529",
+    "modules/selinux/Rakefile": "f37e6131fe7de9a49b09d31596f5fbf1",
+    "modules/selinux/manifests/init.pp": "be9f8b8d40f574696d4905d1c4a8d195",
+    "modules/selinux/manifests/params.pp": "11342a975cfaa09392298698ed7f7ba1",
+    "modules/selinux/spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "modules/selinux/spec/spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
+    "modules/selinux/templates/etc.selinux.config.erb": "86b0cc0296b277dab8075b40b85d0318",
+    "modules/selinux/tests/init.pp": "63e3318bc62e71c064f32c13f7f656ad",
     "modules/stdlib/.project": "9a2c1c7f6229e90fc1f532bfb0020608",
     "modules/stdlib/.rspec": "91cbdf5a061ec59e625b843ce4ec2562",
     "modules/stdlib/.travis.yml": "824334d1dd7d71b86ecc0a9121e763ef",
@@ -371,7 +381,8 @@
     "modules/wget/spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
     "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
-    "templates/location.conf.erb": "d3e076eedfcbff2103a08e15a707a3d0"
+    "templates/location.conf.erb": "d3e076eedfcbff2103a08e15a707a3d0",
+    "templates/location.connector20.conf.erb": "53b57dcf35de9d5e3a569e630d1df229"
   },
   "dependencies": [
     {

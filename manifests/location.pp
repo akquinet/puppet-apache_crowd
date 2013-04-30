@@ -23,7 +23,7 @@ define apache_crowd::location (
 	file { "$location_conf":
 		ensure => present,
 		content => template('apache_crowd/location.conf.erb'),
-		require => [Package['apache'],Exec["pkgmngt_install_mod_authnz_rpm","pkgmngt_install_atlassian_rpms"]],
+		require => [Package['apache'],Exec["pkgmngt_install_atlassian_rpms"]],
 		notify => Service['apache'],
 	}
 }
