@@ -1,4 +1,4 @@
-name    'puppet-apache_crowd'
+name    'akquinet-apache_crowd'
 version '1.0.0'
 source 'https://github.com/akquinet/puppet-apache_crowd'
 author 'saheba'
@@ -11,12 +11,5 @@ dependency 'puppetlabs/puppetlabs-stdlib', '>= 3.2.0'
 
 dependency 'example42/puppet-apache', '>= 2.0.7'
 ## further transitive dependencies of puppet-apache
-dependency 'example42/puppi', '>= 2.0.0'
-
-dependency 'liquidstate/puppet-wget', '>= 1.0.0'
-dependency 'akquinet/puppet-pkgmngt', '>= 1.0.0'
-
-dependency 'akquinet/puppet-archmngt', '>= 1.0.0'
-## further transitive dependencies of puppet-archmngt
-dependency 'akquinet/puppet-unzip', '>= 1.0.0'
+# dependency 'example42/puppi', '>= 2.0.0'
 
