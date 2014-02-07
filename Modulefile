@@ -7,7 +7,7 @@ summary 'module to install a crowd connector in an apache WS'
 project_page 'http://www.akquinet.de/entwicklungsinfrastrukturen.html'
 
 ## Add dependencies, if any:
-dependency 'puppetlabs/puppetlabs-stdlib', '>= 3.2.0'
+dependency 'puppetlabs/stdlib', '>= 3.2.0'
 
 dependency 'example42/apache', '>= 2.0.7'
 ## further transitive dependencies of puppet-apache
