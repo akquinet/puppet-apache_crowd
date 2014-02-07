@@ -9,7 +9,7 @@ project_page 'http://www.akquinet.de/entwicklungsinfrastrukturen.html'
 ## Add dependencies, if any:
 dependency 'puppetlabs/puppetlabs-stdlib', '>= 3.2.0'
 
-dependency 'example42/puppet-apache', '>= 2.0.7'
+dependency 'example42/apache', '>= 2.0.7'
 ## further transitive dependencies of puppet-apache
 # dependency 'example42/puppi', '>= 2.0.0'
 
